@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+  <view class="page-body">
+    <view class="logo-bg">
+      <image src="/resources/logo/logo.png" class="logo"></image>
+    </view>
+    <view class="login-from">
+      <view class="login-list">
+        <image src="/resources/login/login_phone.png" class="phone-icon"></image>
+        <input class="login-input" placeholder="请输入手机号码" type="number" bindinput="phoneChange" value="{{phone}}">请输入手机号码</input>
+      </view>
+      <view class="login-list">
+        <image src="/resources/login/login_password.png" class="psd-icon"></image>
+        <input class="login-input" placeholder="请输入密码" type="{{seePsd ? '' : 'password'}}" bindinput="passwordChange" cursor-spacing="50">请输入密码</input>
+        <view class="see-psd-bg" bindtap="clickSeePsdBtn">
+          <image style="width:23px;height:9px;" src="{{seePsdUrl}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button hover-class="none" disabled="{{loginDisable}}" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

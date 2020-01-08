@@ -1,0 +1,21 @@
+<!--pages/common/scanView/scanView.wxml-->
+<view class="container">
+  <view class="page-body">
+    <camera mode="scanCode" bindscancode="bindscancode"></camera>
+    <view class="mask">
+      <view class="mask-top"></view>
+      <view class="mask-left"></view>
+      <view class="mask-right"></view>
+      <view class="mask-botm">
+        <view style="font-size:13px;color:#fff;text-align:center;margin-top:15px;">将条码放入框内，即可自动扫描</view>
+      </view>
+
+      <image class="scan-leftup" src="/resources/common/center_qrcode_leftup_img.png"></image>
+        <image class="scan-rightup" src="/resources/common/center_qrcode_rightup_img.png"></image>
+        <image class="scan-leftdown" src="/resources/common/center_qrcode_leftdown_img.png"></image>
+        <image class="scan-rightdown" src="/resources/common/center_qrcode_rightdown_img.png"></image>
+        <image class="scan-line" src="/resources/common/center_qrcode_line_img.png" animation="{{animation}}"></image>
+
+    </view>
+  </view>
+</view>

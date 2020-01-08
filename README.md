@@ -1,2 +1,1 @@
-# miniprogramApp
-小程序架构
+# 小程序架构

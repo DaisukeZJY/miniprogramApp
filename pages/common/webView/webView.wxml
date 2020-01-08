@@ -1,0 +1,6 @@
+<!--pages/common/webView/webView.wxml-->
+<view class="container">
+  <view class="page-body">
+    <web-view class="webView" src="{{webUrl}}" bindload="bindload" binderror="binderror"></web-view>
+  </view>
+</view>

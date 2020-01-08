@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/safety/safety",
+    "pages/discover/discover",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/common/webView/webView",
+    "pages/common/scanView/scanView"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f4f4f4",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智安校园",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#63AEFF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "resources/tabbar/tabbar_home_normal.png",
+        "selectedIconPath": "resources/tabbar/tabbar_home_select.png"
+      },
+      {
+        "pagePath": "pages/safety/safety",
+        "text": "安全",
+        "iconPath": "resources/tabbar/tabbar_safety_normal.png",
+        "selectedIconPath": "resources/tabbar/tabbar_safety_select.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "resources/tabbar/tabbar_discover_normal.png",
+        "selectedIconPath": "resources/tabbar/tabbar_discover_select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "resources/tabbar/tabbar_user_normal.png",
+        "selectedIconPath": "resources/tabbar/tabbar_user_select.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}
