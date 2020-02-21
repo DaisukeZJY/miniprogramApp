@@ -72,6 +72,10 @@ const httpRequest = (method, url, param, response, error) => {
       // 打印成功信息
       console.log('request fail error: ', err)
 
+      if (param && param.errModal === false) {
+        return error(err)
+      }
+      
       wx.showModal({
         title: '',
         content: err.errMsg,

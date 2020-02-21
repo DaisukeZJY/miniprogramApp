@@ -114,7 +114,8 @@ App({
   getProCityCombityData: function(){
     const _that = this
     let param = {
-      loading: false
+      loading: false,
+      errModal: false
     }
     var number = setInterval(function () {
       _that.appGET(_that.globalURLConfig.findProCityComnityUrl, param, res => {
@@ -133,7 +134,8 @@ App({
   getHotCityData: function () {
     const _that = this
     let param = {
-      loading: false
+      loading: false,
+      errModal: false
     }
     var number = setInterval(function () {
       _that.appGET(_that.globalURLConfig.findComnityHotCityUrl, param, res => {
@@ -149,7 +151,12 @@ App({
   },
 
   // ================暴露请求封装方法=====================
-  
+  /**
+   * param参数附加
+   * loading:加载提示框，默认显示，如不需要在param中添加loading:false
+   * errModal:错误提示框，默认显示，如不需要在param中添加errModal:false，此参数仅对于error回调处理，对于response中附带的错误不进行处理
+   */
+
   // get请求
   appGET: function(url, param, response, error) {
     HttpRequest._get(url, param, response, error)
