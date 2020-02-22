@@ -15,18 +15,18 @@ camera{
 
 .mask{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0rpx;
+  left: 0rpx;
   width: 100%;
   height: 100vh;
 }
 
 .mask-top{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0rpx;
+  left: 0rpx;
   width: 100%;
-  height: calc((100vh - (100vw - 80px))/2);
+  height: calc((100vh - (100vw - 160rpx))/2);
   background-color: #000;
   opacity:0.4;
   filter:alpha(opacity=40);
@@ -34,10 +34,10 @@ camera{
 
 .mask-left{
   position: absolute;
-  top: calc((100vh - (100vw - 80px))/2);
+  top: calc((100vh - (100vw - 160rpx))/2);
   left: 0px;
-  width: 40px;
-  height: calc(100vw - 80px);
+  width: 80rpx;
+  height: calc(100vw - 160rpx);
   background-color: #000;
   opacity:0.4;
   filter:alpha(opacity=40);
@@ -45,10 +45,10 @@ camera{
 
 .mask-right{
   position: absolute;
-  top: calc((100vh - (100vw - 80px))/2);
+  top: calc((100vh - (100vw - 160rpx))/2);
   right: 0px;
-  width: 40px;
-  height: calc(100vw - 80px);
+  width: 80rpx;
+  height: calc(100vw - 160rpx);
   background-color: #000;
   opacity:0.4;
   filter:alpha(opacity=40);
@@ -56,51 +56,51 @@ camera{
 
 .mask-botm{
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0rpx;
+  left: 0rpx;
   width: 100%;
-  height: calc((100vh - (100vw - 80px))/2);
+  height: calc((100vh - (100vw - 160rpx))/2);
   background-color: #000;
   opacity:0.4;
   filter:alpha(opacity=40);
 }
 
 .scan-leftup{
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
   position: absolute;
-  top: calc((100vh - (100vw - 80px))/2);
-  left: 40px;
+  top: calc((100vh - (100vw - 160rpx))/2);
+  left: 80rpx;
 }
 
 .scan-rightup{
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
   position: absolute;
-  top: calc((100vh - (100vw - 80px))/2);
-  right: 40px;
+  top: calc((100vh - (100vw - 160rpx))/2);
+  right: 80rpx;
 }
 
 .scan-leftdown{
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
   position: absolute;
-  bottom: calc((100vh - (100vw - 80px))/2);
-  left: 40px;
+  bottom: calc((100vh - (100vw - 160rpx))/2);
+  left: 80rpx;
 }
 
 .scan-rightdown{
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
   position: absolute;
-  bottom: calc((100vh - (100vw - 80px))/2);
-  right: 40px;
+  bottom: calc((100vh - (100vw - 160rpx))/2);
+  right: 80rpx;
 }
 
 .scan-line{
-  width: calc(100vw - 80px);
-  height: 2px;
+  width: calc(100vw - 160rpx);
+  height: 4rpx;
   position: absolute;
-  top: calc((100vh - (100vw - 80px))/2);
-  left: 40px;
+  top: calc((100vh - (100vw - 160rpx))/2);
+  left: 80rpx;
 }
