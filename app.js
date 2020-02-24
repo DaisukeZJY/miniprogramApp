@@ -117,6 +117,10 @@ App({
       loading: false,
       errModal: false
     }
+    var time = 500
+    if (wx.getStorageSync(this.globalCacheConfig.cacheKeyConfig.proCityComnityDataKey)) {
+      time = 5000
+    }
     var number = setInterval(function () {
       _that.appGET(_that.globalURLConfig.findProCityComnityUrl, param, res => {
         clearInterval(number)
@@ -127,7 +131,7 @@ App({
       }, err => {
         clearInterval(number)
       })
-    }, 5000)
+    }, time)
   },
 
   /**获取热门城市数据 */
@@ -136,6 +140,9 @@ App({
     let param = {
       loading: false,
       errModal: false
+    }
+    if (wx.getStorageSync(this.globalCacheConfig.cacheKeyConfig.hotCityComnityDataKey)) {
+      time = 5000
     }
     var number = setInterval(function () {
       _that.appGET(_that.globalURLConfig.findComnityHotCityUrl, param, res => {
@@ -147,7 +154,7 @@ App({
       }, err => {
         clearInterval(number)
       })
-    }, 5000)
+    }, time)
   },
 
   // ================暴露请求封装方法=====================
