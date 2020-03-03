@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isScan: false
   },
 
   /**
@@ -46,6 +46,10 @@ Page({
 
   // 扫描成功
   bindscancode(e){
+    if (this.data.isScan) {
+      return
+    }
+    this.data.isScan = true
     console.log('扫描成功: ', e)
     if (e.detail.result) {
       // 获取事件通道
