@@ -1,4 +1,5 @@
 // 请求封装
+const appVersion = '1.0.0'
 
 const httpRequest = (method, url, param, response, error) => {
   if (param && param.loading == false) {
@@ -13,15 +14,14 @@ const httpRequest = (method, url, param, response, error) => {
   const token = wx.getStorageSync('tokenCacheKey')
   // 打印请求信息
   console.log('request url: ', url, 'token: ', token, 'param: ', param)
-  const _app = getApp()
+
   wx.request({
     url: url,
     header: {
       'content-type': 'application/json',
       'token': token,
-      'deviceType': 'IOS',
-      'appVersion': _app.globalData.requestVersion,
-      'systemVersion': ''
+      'deviceType': 'mini',
+      'appVersion': appVersion
     },
     method: method,
     data: param,
@@ -43,6 +43,11 @@ const httpRequest = (method, url, param, response, error) => {
 
       // 处理特定错误码
       if (code != 0) {
+        // 不弹窗，返回上层处理
+        if (param && param.errModal === false) {
+          return response(res)
+        }
+
         // 弹窗
         wx.showModal({
           title: '',

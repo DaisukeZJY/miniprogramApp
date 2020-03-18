@@ -1,4 +1,11 @@
 //app.js
+/**
+ * 发布注意事项：
+ * 1、修改urlConfig.js文件中的：请求路径，切换正式环境
+ * 2、修改request.js文件中的请求版本：appVersion
+ * 3、修改app.js文件中的：appVersion，并与request.js文件中的appVersion保持一致
+ * 4、是否关闭（不校验合法域名。。）
+ */
 import HttpRequest from '/request.js'
 import UrlConfig from '/urlConfig.js'
 import CacheConfig from '/cacheConfig.js'
@@ -94,8 +101,7 @@ App({
 
     systemInfo: null, // 系统信息
     isIphoneX: false, // 是否有刘海
-    currentVersion: '1.4.0', // 当前小程序版本
-    requestVersion: '2.3.0',// 当前请求版本
+    appVersion: '1.1.0', // 当前小程序版本
   },
   // 全局请求路径配置
   globalURLConfig: UrlConfig,
@@ -161,7 +167,7 @@ App({
   /**
    * param参数附加
    * loading:加载提示框，默认显示，如不需要在param中添加loading:false
-   * errModal:错误提示框，默认显示，如不需要在param中添加errModal:false，此参数仅对于error回调处理，对于response中附带的错误不进行处理
+   * errModal:错误提示框，默认显示，如不需要在param中添加errModal:false
    */
 
   // get请求
