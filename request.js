@@ -107,12 +107,12 @@ const httpUploadFile = (url, filePath, header, response, error) => {
   const token = wx.getStorageSync('tokenCacheKey')
   // 打印请求信息
   console.log('UploadFile url: ', url, 'token: ', token, 'filePath: ', filePath, 'header: ', header)
-  const _app = getApp()
+  
   var commonHead = {
     'content-type': 'application/json',
     'token': token,
-    'deviceType': 'IOS',
-    'appVersion': _app.globalData.requestVersion,
+    'deviceType': 'mini',
+    'appVersion': appVersion,
     'systemVersion': ''
   }
   wx.uploadFile({

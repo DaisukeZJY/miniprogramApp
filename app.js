@@ -4,8 +4,10 @@
  * 1、修改urlConfig.js文件中的：请求路径，切换正式环境
  * 2、修改request.js文件中的请求版本：appVersion
  * 3、修改app.js文件中的：appVersion，并与request.js文件中的appVersion保持一致
- * 4、是否关闭（不校验合法域名。。）
+ * 4、修改app.json问价中："debug": false,
+ * 5、项目详情-本地设置-是否关闭（不校验合法域名。。）
  */
+
 import HttpRequest from '/request.js'
 import UrlConfig from '/urlConfig.js'
 import CacheConfig from '/cacheConfig.js'
